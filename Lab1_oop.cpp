@@ -5,7 +5,8 @@
 #include "Lab1_oop.h"
 #include "module1.h"
 #include "module2.h"
-wchar_t textResult[256] = L"Тут буде текст";
+#define TEXT_RESULT_LENGTH 256
+wchar_t textResult[TEXT_RESULT_LENGTH] = L"Тут буде текст";
 int numResult = 50;
 
 #define MAX_LOADSTRING 100
@@ -202,16 +203,14 @@ INT_PTR CALLBACK About(HWND hDlg, UINT message, WPARAM wParam, LPARAM lParam)
     return (INT_PTR)FALSE;
 }
 
-//функція обробник для пункту Work1
 void MyWork1(HWND hWnd)
 {
-    if (Func_MOD1(hWnd, textResult, 256) == 1)
+    if (Func_MOD1(hWnd, textResult, TEXT_RESULT_LENGTH) == 1)
     {
         InvalidateRect(hWnd, NULL, TRUE);
     }
 }
 
-//функція обробник для пункту Work2
 void MyWork2(HWND hWnd)
 {
     if (Func_MOD2(hWnd, &numResult) == 1)

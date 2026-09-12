@@ -7,7 +7,7 @@ static int pos = 50;
 static INT_PTR CALLBACK DlgProc2(HWND hDlg, UINT iMessage, WPARAM wParam, LPARAM lParam)
 {
 
-    HWND hWndScroll = GetDlgItem(hDlg, 1002);
+    HWND hWndScroll = GetDlgItem(hDlg, ID_MODULE2);
 
     switch (iMessage)
     {
@@ -19,7 +19,7 @@ static INT_PTR CALLBACK DlgProc2(HWND hDlg, UINT iMessage, WPARAM wParam, LPARAM
         return (INT_PTR)TRUE;
 
     case WM_HSCROLL: 
-        pos = GetScrollPos(GetDlgItem(hDlg, 1002), SB_CTL);
+        pos = GetScrollPos(GetDlgItem(hDlg, ID_MODULE2), SB_CTL);
         switch (LOWORD(wParam))
         {
         case SB_LINELEFT:  pos--; break; 

@@ -10,7 +10,7 @@ static INT_PTR CALLBACK DlgProc1(HWND hDlg, UINT iMessage, WPARAM wParam, LPARAM
     case WM_COMMAND:
         if (LOWORD(wParam) == 1 || LOWORD(wParam) == IDOK)
         {
-            GetDlgItemText(hDlg, 1001, text, maxLetters_local);
+            GetDlgItemText(hDlg, ID_MODULE1, text, maxLetters_local);
 
             EndDialog(hDlg, 1);
             break;
